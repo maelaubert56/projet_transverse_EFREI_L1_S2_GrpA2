@@ -153,10 +153,9 @@ while running:
                 game.reset()
 
             elif menu.play_rect.collidepoint(event.pos) and menu_number in (0, 2) and game.is_playing == 0: # clic sur play (sur le menu principal et pause)
-                print("menu:", menu_number)
                 if menu_number == 0: # si la partie n'est pas lancée, on la lance
                     game.start()
-                    print("game started")
+
                 game.is_playing = 1
                 menu_number = 0
 

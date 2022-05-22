@@ -8,7 +8,7 @@ window_height = 732
 FPS = 60
 
 # images décors
-path_terrain = "assets/terrains/terrain_island_1.png"
+path_terrain = ["assets/terrains/terrain_island_1.png", "assets/terrains/terrain_island_2.png", "assets/terrains/terrain_island_3.png"]
 path_background = "assets/backgrounds/background_sky_1.png"
 path_sea = "assets/backgrounds/sea.png"
 path_title = "assets/affichages/title.png"
@@ -61,5 +61,6 @@ teams_name = ("bleu", "rouge")
 path_player_img_bleu = ["assets/player/knight_bleu.png", "assets/player/knight_bleu2.png"]
 path_player_img_vert = ["assets/player/knight_vert.png", "assets/player/knight_vert2.png"]
 path_player_img_tab = [path_player_img_bleu, path_player_img_vert]
+path_turn_img = ["assets/affichages/tour_bleu.png","assets/affichages/tour_rouge.png"]
 # paramètre de la mer
 sea_level = 100
