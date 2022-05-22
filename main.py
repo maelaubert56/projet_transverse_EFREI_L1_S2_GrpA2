@@ -3,7 +3,10 @@ import DEFAULT
 from game import Game
 from menu import Menu
 from ground import Ground
+import random
 
+
+print("Chargement du jeu...")
 # initialisation de pygame au lancement
 pygame.init()
 
@@ -34,6 +37,7 @@ running = True
 j = 0
 menu_number = 0
 
+print("Jeu lance :")
 # boucle de jeu principale
 while running:
     if game.is_playing == 1:
@@ -54,11 +58,13 @@ while running:
                 game.player_choice.use_jetpack((4, 0), screen)
             else:
                 game.player_choice.move_right(screen)
+
         elif game.pressed.get(pygame.K_LEFT):
             if game.player_choice.bool_jetpack:
                 game.player_choice.use_jetpack((-4, 0), screen)
             else:
                 game.player_choice.move_left(screen)
+
         if game.player_choice.bool_jetpack and game.pressed.get(pygame.K_SPACE):
             game.player_choice.fall_velocity = 1
             game.player_choice.use_jetpack((0, -5), screen)
@@ -68,6 +74,7 @@ while running:
             if game.player_choice.bool_equipped:
                 if game.player_choice.puissance < 30:
                     game.player_choice.puissance += 1
+
                 game.player_choice.voir_jauge(screen=screen)
 
             # utilisation du jetpack
@@ -101,7 +108,7 @@ while running:
                     game.is_playing = 0
 
                 elif event.key == pygame.K_RETURN:  # fait spawner un personnage
-                    game.spawn_player()
+                    game.spawn_player(random.randint(100,1100))
 
                 elif event.key == pygame.K_m:  # mort subite
                     game.bool_ms = True

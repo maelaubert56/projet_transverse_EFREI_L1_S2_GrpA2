@@ -1,4 +1,5 @@
-DEBUG = False # testtest
+import pygame
+DEBUG = False
 
 # paramètres de la fenêtre
 window_name = "projet transverse"
@@ -30,11 +31,38 @@ path_sound_off = "assets/UI/musicOff.png"
 path_quit_game = "assets/UI/home.png"
 
 # images armes
+pygame.transform.scale(pygame.image.load("assets/weapons/shuriken.png"), (100, 100))
 path_shuriken = "assets/weapons/shuriken.png"
-image_explo = "assets/weapons/explosion.png"
-image_explo1 = "assets/weapons/explosion1.png"
-image_explo2 = "assets/weapons/explosion2.png"
-image_explo3 = "assets/weapons/explosion3.png"
+image_explo = pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/explosion.png"), (100, 100))
+image_explo1 = pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/explosion1.png"), (100, 100))
+image_explo2 = pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/explosion2.png"), (100, 100))
+image_explo3 = pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/explosion3.png"), (100, 100))
+
+tab_explo = [image_explo, image_explo1, image_explo2, image_explo3,
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 1.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 2.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 3.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 4.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 5.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 6.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 7.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 8.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 9.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 10.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 11.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 12.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 13.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 14.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 15.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 16.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 17.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 18.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 19.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 20.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 21.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 22.png"), (100, 100)),
+             pygame.transform.scale(pygame.image.load("assets/weapons/ExplosionV2/Calque 23.png"), (100, 100)),
+             ]
 
 # son
 path_music = "assets/sounds/music_theme_1.wav"

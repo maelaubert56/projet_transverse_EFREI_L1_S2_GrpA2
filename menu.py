@@ -22,9 +22,6 @@ class Menu():
         self.settings_rect.x = 1270
         self.settings_rect.y = 0
 
-
-
-
         # bouton retour
         self.return_image = pygame.image.load(DEFAULT.path_return)
         self.return_image = pygame.transform.scale(self.return_image, (120, 120))
