@@ -192,7 +192,6 @@ class Game:
 
         self.sea_level = DEFAULT.sea_level
         self.is_playing = 0
-        self.bool_ms = 0
 
     def turn_per_turn(self,trigger):
         """se déclenche quand un perso tire (trigger=1), et change de coté, ajoute un tour et fait monter le niveau de la mer"""

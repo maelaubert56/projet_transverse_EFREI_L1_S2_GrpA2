@@ -5,6 +5,8 @@ from menu import Menu
 from ground import Ground
 import random
 
+
+print("Chargement du jeu...")
 # initialisation de pygame au lancement
 pygame.init()
 
@@ -35,6 +37,7 @@ running = True
 j = 0
 menu_number = 0
 
+print("Jeu lance :")
 # boucle de jeu principale
 while running:
     if game.is_playing == 1:
