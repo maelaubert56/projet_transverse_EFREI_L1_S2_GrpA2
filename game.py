@@ -71,11 +71,17 @@ class Game:
         self.bluewins_rect.x = 240
         self.bluewins_rect.y = 100
 
+        # images tours
+        self.turn_image = pygame.image.load(DEFAULT.path_turn_img[self.turn_num%2])
+        self.turn_image_rect = self.turn_image.get_rect()
+        self.turn_image_rect.x = 10
+        self.turn_image_rect.y = 10
+
     # winners 0 bleu 1 rouge
     def start(self):
-        print("spawn ?")
+        self.object_ground.change_background()
         for i in range(0, DEFAULT.player_per_team*2):
-            self.spawn_player()
+            self.spawn_player(350+i*150)
 
     def gameover(self, screen):
         self.is_playing = -1
@@ -92,6 +98,8 @@ class Game:
         # appliquer l'eau sur le terrain
         screen.blit(self.sea, (0, screen.get_height() - self.sea_level))
         screen.blit(self.object_ground.image, (0, 0))
+        # on affiche le tour:
+        screen.blit(self.turn_image,self.turn_image_rect)
         # on update les players
         for player in self.all_players:
             self.player_choice.voir_jauge(screen)
@@ -137,17 +145,16 @@ class Game:
         # on update le 1er plan
         screen.blit(self.sea, (-self.sea_x_mov, screen.get_height() - self.sea_level + 20))
 
-    def spawn_player(self):
-        print("spawnnn")
+    def spawn_player(self,x):
         # décide de l'équipe et l'équipe adverse
         if self.last_team == 0:
-            new_player = Player(self, team=1)
+            new_player = Player(self, team=1, x=x)
             self.all_players_blue.add(new_player)
             new_player.opposing_team = self.all_players_red
             # témoin pour que le jeu alterne entre bleu et rouge
             self.last_team = 1
         else:
-            new_player = Player(self, team=0)
+            new_player = Player(self, team=0, x=x)
             self.all_players_red.add(new_player)
             new_player.opposing_team = self.all_players_blue
             # témoin pour que le jeu alterne entre bleu et rouge
@@ -200,3 +207,4 @@ class Game:
         if trigger:
             print("Le tour de l'autre equipe")
             self.change_player_choice()
+            self.turn_image = pygame.image.load(DEFAULT.path_turn_img[self.turn_num%2])

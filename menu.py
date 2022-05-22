@@ -29,6 +29,13 @@ class Menu():
         self.return_rect.x = 50
         self.return_rect.y = 50
 
+        # bouton retour droite
+        self.return_droite_image = pygame.image.load(DEFAULT.path_return)
+        self.return_droite_image = pygame.transform.scale(self.return_droite_image, (120, 120))
+        self.return_droite_rect = self.return_droite_image.get_rect()
+        self.return_droite_rect.x = DEFAULT.window_width - 50
+        self.return_droite_rect.y = self.return_rect.y
+
         # bouton credits
         self.credit_image = pygame.image.load(DEFAULT.path_credit)
         self.credit_image = pygame.transform.scale(self.credit_image, (120, 120))
@@ -73,6 +80,13 @@ class Menu():
         self.credits_rect.x = 0
         self.credits_rect.y = 0
 
+        # Image regles
+        self.regles = pygame.image.load(DEFAULT.path_regles)
+        self.regles_rect = self.regles.get_rect()
+        self.regles = pygame.transform.scale(self.regles, (1920 * 0.6, 1080 * 0.6))
+        self.regles_rect.x = 20
+        self.regles_rect.y = 0
+
         # image quitter jeu
         self.quit_game = pygame.image.load(DEFAULT.path_quit_game)
         self.quit_game = pygame.transform.scale(self.quit_game, (120, 120))
@@ -104,8 +118,9 @@ class Menu():
             screen.blit(self.quit_game,self.quit_game_rect)
 
         elif menu_number == 3:  # menu info
-            screen.blit(self.return_image, self.return_rect)  # ==> retour au menu precedent
+            screen.blit(self.return_droite_image, self.return_droite_rect)  # ==> retour au menu precedent
+            screen.blit(self.regles, self.regles_rect)
 
         elif menu_number == 4:  # menu credit
             screen.blit(self.return_image, self.return_rect)
-            screen.blit(self.credits,self.credits_rect)
+            screen.blit(self.credits, self.credits_rect)

@@ -6,7 +6,7 @@ from math import cos, sin, sqrt
 
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, game, team: int):
+    def __init__(self, game, team: int, x):
         super().__init__()
         self.game = game
         # attributs de jeu
@@ -47,7 +47,7 @@ class Player(pygame.sprite.Sprite):
         self.bool_jetpack = False
         self.jtpck_fuel=self.rect.height
         # débogage et masks
-        self.rect.x = randint(10, DEFAULT.window_width - 100)
+        self.rect.x = x
         self.rect.y = 50
         self.mask = pygame.mask.from_surface(self.image)
         # nom du personnage (numéro pour le moment pour debug)
