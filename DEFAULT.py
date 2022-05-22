@@ -4,6 +4,7 @@ DEBUG = False # testtest
 window_name = "projet transverse"
 window_icon = "assets/logo_efrei.png"
 window_width = 1300
+window_height = 732
 FPS = 60
 
 # images décors
@@ -12,6 +13,7 @@ path_background = "assets/backgrounds/background_sky_1.png"
 path_sea = "assets/backgrounds/sea.png"
 path_title = "assets/affichages/title.png"
 path_credits = "assets/affichages/credits.png"
+path_regles = "assets/affichages/JEUHISTOIRE.png"
 path_gameover = "assets/affichages/gameover.png"
 path_bluewins = "assets/affichages/bluewins.png"
 path_redwins = "assets/affichages/redwins.png"

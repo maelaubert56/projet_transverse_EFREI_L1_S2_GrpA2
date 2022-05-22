@@ -34,7 +34,7 @@ class Game:
         self.sea = pygame.transform.scale(self.sea, (self.sea_rect.width + 100, self.object_ground.rect.height))
         self.sea_x_mov = 0
         # mort subite
-        self.bool_ms = False
+        self.bool_ms = True
         self.turn_num=0
         # dictionnaire de touches
         self.pressed = {}
@@ -73,7 +73,7 @@ class Game:
 
     # winners 0 bleu 1 rouge
     def start(self):
-
+        print("spawn ?")
         for i in range(0, DEFAULT.player_per_team*2):
             self.spawn_player()
 
@@ -138,6 +138,7 @@ class Game:
         screen.blit(self.sea, (-self.sea_x_mov, screen.get_height() - self.sea_level + 20))
 
     def spawn_player(self):
+        print("spawnnn")
         # décide de l'équipe et l'équipe adverse
         if self.last_team == 0:
             new_player = Player(self, team=1)

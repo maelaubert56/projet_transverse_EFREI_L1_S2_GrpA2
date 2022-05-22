@@ -11,6 +11,7 @@ class Ground(pygame.sprite.Sprite):
         self.image = pygame.image.load(DEFAULT.path_terrain)
         self.rect = self.image.get_rect()
         self.rect.width = DEFAULT.window_width
-        self.rect.height = DEFAULT.window_width * self.rect.height / self.rect.width
+        DEFAULT.height = DEFAULT.window_width * self.rect.height / self.rect.width
+        self.rect.height = DEFAULT.window_height
         self.image = pygame.transform.scale(self.image, (self.rect.width, self.rect.height))
         self.mask = pygame.mask.from_surface(self.image)
