@@ -9,7 +9,7 @@ window_height = 732
 FPS = 60
 
 # images décors
-path_terrain = "assets/terrains/terrain_island_1.png"
+path_terrain = "assets/terrains/terrain_island_2.png"
 path_background = "assets/backgrounds/background_sky_1.png"
 path_sea = "assets/backgrounds/sea.png"
 path_title = "assets/affichages/title.png"
@@ -66,6 +66,7 @@ tab_explo = [image_explo, image_explo1, image_explo2, image_explo3,
 
 # son
 path_music = "assets/sounds/music_theme_1.wav"
+path_tab_music = ["assets/sounds/music_theme_1.wav","assets/sounds/music_theme_2.mp3","assets/sounds/music_theme_3.wav","assets/sounds/music_theme_4.mp3"]
 music_level = 10 # 10 pour activer, 0 pour couper
 
 # player
