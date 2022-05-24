@@ -53,13 +53,13 @@ while running:
     # touches pressées par le joueur
     if game.player_choice:
 
-        if game.pressed.get(pygame.K_RIGHT):
+        if game.pressed.get(pygame.K_RIGHT) or game.pressed.get(pygame.K_d):
             if game.player_choice.bool_jetpack:
                 game.player_choice.use_jetpack((4, 0), screen)
             else:
                 game.player_choice.move_right(screen)
 
-        elif game.pressed.get(pygame.K_LEFT):
+        elif game.pressed.get(pygame.K_LEFT) or game.pressed.get(pygame.K_q):
             if game.player_choice.bool_jetpack:
                 game.player_choice.use_jetpack((-4, 0), screen)
             else:
@@ -82,10 +82,10 @@ while running:
                 game.player_choice.jumping = True
 
         # ajustement de la visée
-        if game.pressed.get(pygame.K_UP):
+        if game.pressed.get(pygame.K_UP) or game.pressed.get(pygame.K_z):
             if game.player_choice.bool_equipped:
                 game.player_choice.show_viseur(1, screen=screen)
-        elif game.pressed.get(pygame.K_DOWN):
+        elif game.pressed.get(pygame.K_DOWN) or game.pressed.get(pygame.K_s):
             if game.player_choice.bool_equipped:
                 game.player_choice.show_viseur(-1, screen=screen)
 

@@ -131,7 +131,7 @@ class Player(pygame.sprite.Sprite):
         if self.team == 0:
             life_text = police.render(str(self.health), True, (0, 0, 255))
         else:
-            life_text = police.render(str(self.health), True, (255, 0, 0))
+            life_text = police.render(str(self.health), True, (0, 255, 0))
         surface.blit(life_text, (self.rect.centerx - life_text.get_rect().centerx, self.rect.y - 15))
 
     def move_right(self, screen):
