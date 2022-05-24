@@ -54,10 +54,9 @@ class Weapon(pygame.sprite.Sprite):
         # verif limites de map
         elif self.rect.x > DEFAULT.window_width + 100 or self.rect.x < 0:
             self.kill()
-        # sinon on fait la trajectoire
+        # sinon on effectue l'équation de la trajectoire
         else:
             self.rect.x += self.x_v
-            # self.x_v /= 1.1
             self.rect.y += 9.8 * self.t_trajectory + self.y_v
             self.t_trajectory += 0.01
             self.rotate()
@@ -65,7 +64,7 @@ class Weapon(pygame.sprite.Sprite):
     def explosion(self, screen):
         """permet de créer un rayon de dégâts autour de l'impact de projectile"""
         # faire l'animation
-        list_temp=[]
+        list_temp = [ ]
         while self.img_explo_current != len(DEFAULT.tab_explo):
             screen.blit(DEFAULT.tab_explo[self.img_explo_current], (self.rect.x-self.rect.width, self.rect.y-self.rect.height))
             self.img_explo_current += 1

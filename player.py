@@ -228,8 +228,10 @@ class Player(pygame.sprite.Sprite):
                 self.rect.x += direct[0]
                 self.rect.y += direct[1]
                 self.jtpck_fuel -= 1/5
-                print(self.jtpck_fuel)
-                self.t_saut = 0
+                if direct[1]:
+                    self.t_saut = 0
+                else:
+                    self.t_saut += 0.01
         # sinon si collision avec la tête
         elif collision[1] < (self.rect.y + (self.rect.height / 2) or self.jtpck_fuel):
             self.bool_jetpack = False
@@ -297,9 +299,8 @@ class Player(pygame.sprite.Sprite):
         pygame.draw.rect(screen, bar_color, bar_position)
 
     def vecteur(self, x, y):
-        self.x_v = (self.rect.x -x)/2
+        print("pasage vecteur")
+        self.x_v = (self.rect.x - x)/2
         self.y_v = (self.rect.y - y)/9.8
-        # self.y_v = -(self.y_v**2)
-        # (self.player_launcher.viseur_rect.x - self.player_launcher.rect.x) / 9.8 * self.player_launcher.puissance / 10
-        # (self.player_launcher.viseur_rect.y - self.player_launcher.rect.y) / 9.8 * self.player_launcher.puissance / 10
+        self.y_v = -(self.y_v**2)
         self.t_saut += 0.01

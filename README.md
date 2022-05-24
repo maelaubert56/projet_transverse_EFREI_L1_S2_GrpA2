@@ -17,24 +17,8 @@
 - clic = placer le joueur à l'endroit du clic (mode DEBUG)
 
 ### *Todo list :*
+Done
 
-- verifier si opposing team vrmnt utile
-- explosions plus souffles a ameliorer
-- si on saute de trop haut, on passe a travers le sol
-- tjr un pb on peu se bloquer sur un angle si on touche avec la tete en avancant, pb de blocage en l'air et avec le jetpack aussi
-- finir l'initialisation du jeu
-- retirer toutes les variables d'etats du player
-- si pas beaucoup d'armes, regrouper toutes les armes dans une barre (type minecraft) que l'on peut sélectionner avec les touches numériques (genre 10 cases numérotés de 1 à 10)
-- faire le syteme de jeu tour par tour, avec 1 seul tir par arme
-- améliorer les équipes avec une classe ou superclasse et avec if self.equipe!= equipe: collision=true
-  - AJOUTER LA NOUVELLE ARME NAIN (grenade?)
-- menu contextuel pur changer les armes
-- prendre des persos de profil avec les 2 cotés?
-- animation de déplacement/ de tir de saut etc
-- menu de jeu
-- bonus qui tombent sur la carte
-- fuel pour jetpack
-- ajout hud mort subite temps restant, points par equipe, meilleur quit du jeu ?
 ####
 idees ++
 - multijoueur;

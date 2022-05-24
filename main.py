@@ -107,7 +107,7 @@ while running:
                     menu_number = 2
                     game.is_playing = 0
 
-                elif event.key == pygame.K_RETURN:  # fait spawner un personnage
+                elif event.key == pygame.K_RETURN and DEFAULT.DEBUG:  # fait spawner un personnage
                     game.spawn_player(random.randint(100,1100))
 
                 elif event.key == pygame.K_m:  # mort subite
@@ -116,7 +116,7 @@ while running:
                 elif event.key == pygame.K_c:  # changement de personnage
                     game.change_player_choice()
 
-                elif event.key == pygame.K_t:  # changement de team (debug uniquement)
+                elif event.key == pygame.K_t :  # changement de team (debug uniquement)
                     game.team_turn = (game.team_turn + 1) % 2
 
                 elif event.key == pygame.K_x:  # équiper une arme ou la ranger
