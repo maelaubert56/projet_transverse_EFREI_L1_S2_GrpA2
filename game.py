@@ -79,7 +79,7 @@ class Game:
 
     # winners 0 bleu 1 rouge
     def start(self):
-        self.object_ground.change_background()
+        print("spawn ?")
         for i in range(0, DEFAULT.player_per_team*2):
             self.spawn_player(350+i*150)
 
@@ -99,7 +99,7 @@ class Game:
         screen.blit(self.sea, (0, screen.get_height() - self.sea_level))
         screen.blit(self.object_ground.image, (0, 0))
         # on affiche le tour:
-        screen.blit(self.turn_image,self.turn_image_rect)
+        screen.blit(self.turn_image, self.turn_image_rect)
         # on update les players
         for player in self.all_players:
             self.player_choice.voir_jauge(screen)

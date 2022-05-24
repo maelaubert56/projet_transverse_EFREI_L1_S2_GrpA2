@@ -303,10 +303,3 @@ class Player(pygame.sprite.Sprite):
         # (self.player_launcher.viseur_rect.x - self.player_launcher.rect.x) / 9.8 * self.player_launcher.puissance / 10
         # (self.player_launcher.viseur_rect.y - self.player_launcher.rect.y) / 9.8 * self.player_launcher.puissance / 10
         self.t_saut += 0.01
-
-        # while self.img_explo_current != len(DEFAULT.tab_explo):
-        #     screen.blit(DEFAULT.tab_explo[self.img_explo_current], (self.rect.x-self.rect.width, self.rect.y-self.rect.height))
-        #     self.img_explo_current += 1
-        #     print(self.img_explo_current)
-        # else :
-        #     self.img_explo_current = 0
